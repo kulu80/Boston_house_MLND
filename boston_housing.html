@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11851,23 +11851,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Maximum price of the data</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Median price of the data</span>
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Standard deviation of prices of the data</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="k">print</span> <span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span>
@@ -11894,7 +11894,7 @@ Minimum price: $105,000.00
 Maximum price: $1,024,800.00
 Mean price: $454,342.94
 Median price $438,900.00
-Standard deviation of prices: $165,340.28
+Standard deviation of prices: $165,171.13
 </pre>
 </div>
 </div>
@@ -13247,7 +13247,7 @@ gy0zMzMzM7MG8GDLzMzMzMysATzYMjMzMzMza4D/B8xtbi+NWxPVAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> The maximum depth (max_depth) paramter in decision tree limits the number of nodes in a tree. It is important to contol over-fitting in a model as higher will allow model to learn relation very specific to a particular sample. Let us consider the top right graph with max_depth of 3, as the number of training points increases the testing score increase while that of the training score decrease, however both score become stabilize  after a certain number of training points. Upto a certain training point the model benifts from having more training points, howevert adding more point onwards hasn't significantly imporved both the training and testing score.</p>
+<p><strong>Answer: </strong> The maximum depth (max_depth) paramter in decision tree limits the number of nodes in a tree. It is important to contol over-fitting in a model as higher max_depth will allow model to learn relation very specific to a particular sample. Let us consider the top right graph with max_depth of 3, as the number of training points increases the testing score increase while that of the training score decrease, however both score become stabilize  after a certain number of training points. Upto a certain training point the model benifts from having more training points, however adding more point onwards hasn't significantly imporved both the training and testing score.</p>
 
 </div>
 </div>
@@ -13729,7 +13729,7 @@ QmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> When the model is trained with a max_depth of 1 is suffers from high bias, that is becuase of small number of leaves created from the 1 node,it doesn't full undersand the variablity of the dataset it is trained- it learns less about the data. When we increase the max_depth to 10 the model will suffer from high variance, as number of nodes  in a tree increase the number of leaves also increase , which makes the model to learn more specifica about the dataset and by now it leearns the noise not the general pattern of the dataset.</p>
+<p><strong>Answer: </strong> When the model is trained with a max_depth of 1 is suffers from high bias, that is becuase of small number of leaves created from the 1 node,it doesn't full undersand the variablity of the dataset it is trained- it learns less about the data. When we increase the max_depth to 10 the model will suffer from high variance, as number of nodes  in a tree increase the number of leaves also increase , which makes the model to learn more specifica about the dataset and by now it leearns the noise not the general pattern of the dataset. As seen in the above graph, the training and validation score increase as max_depth increase and thse values are closer until the max_depth becomes 4 and the score starts to spread apart from each other after that as max_depth increases. The training score kept increasing as the max_depth increases while the training score fist start decrease for sometime and stablizes as max-depth value increases.</p>
 
 </div>
 </div>
@@ -13780,7 +13780,7 @@ QmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>  Grid search  is a way of systematically working through multiple combinations of parameter tunes as it goes to determine which time gives the best performance. Grid search can be applied with classification algorithm to search for combination of paramters which optimizes model performance.</p>
+<p><strong>Answer: </strong>  Grid search  is a way of systematically working through multiple combinations of parameter tunes as it goes to determine which time gives the best performance. Grid search can be applied with classification algorithm to search for combination of paramters which optimizes model performance. Almost all machine learning algorithm has a parameter/s ot tune to maximize model performance, in this project the hyper-parameter 'max_depth',scoring and cross-validation are used to select optimized model performance.</p>
 
 </div>
 </div>
@@ -13801,7 +13801,8 @@ QmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> K-fold cross_validation is one of the validation technique in machine learning, it randomly partitioned into K equal sized samples at which the model is trained in K-1 samples and the remaing one sample is left as testing set for validation. Each of K samples are used used once as a test set, the K error estimates from the folds can then be averaged to produce a single estimate. The advantage of this model is that all observations are used for both training and validation, and each observation is used for validation exaclty once. Using grid search with out cross-validation set could still produce better performing model by optimizing the parmaters, but it still are using the training dataset only, still we are not sure how it would perform for dataset outside of the training set.</p>
+<p><strong>Answer: </strong> K-fold cross-validation is one of the validation technique in machine learning, it randomly partitioned a dataset into K equal sized samples at which the model is trained in K-1 samples and the remaing one sample is left as testing set for validation. Each of K samples are used used once as a test set and training set, the K error estimates from the folds can then be averaged to produce a single estimate. The advantage of this model is that all observations are used for both training and validation, and each observation is used for validation exaclty once. Using grid search without cross-validation set could still produce better performing model by optimizing the parmaters, but it still are using the training dataset only, still we are not sure how it would perform for dataset outside of the training set.</p>
+<p>As stated above K-fold cross-validation split the data into K-fold and use each fold as training and testing data and take the average of each model performance. Grid search is a method used to select which pair of parameters produce the best performance of an algorithm. So augmented with K-fold cross-validation or vise-versa can give best way of selecting an optimized model performance.</p>
 
 </div>
 </div>
@@ -13857,7 +13858,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
     <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">()</span>
 
     <span class="c1"># TODO: Create a dictionary for the parameter &#39;max_depth&#39; with a range from 1 to 10</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)}</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">1</span><span class="p">)}</span>
 
     <span class="c1"># TODO: Transform &#39;performance_metric&#39; into a scoring function using &#39;make_scorer&#39; </span>
     <span class="n">scoring_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">performance_metric</span><span class="p">)</span>
@@ -14018,12 +14019,184 @@ Predicted selling price for Client 3&#39;s home: $931,636.36
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">reg</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[79]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.84399955753608991</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">price</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">client_data</span><span class="p">)):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">price</span><span class="o">-</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s1">&#39;Client &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+SUVORK5CYII=
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> The price of client 1's home is $403,025.00 which is less than one standard deviation from the mean, I suggest it is a good price as about more than 60% of the home price is about one standards deviation less or more than the mean if the distribution of the data set is normal. The price of client 2's home is $237,478.72 which is more than double the minimum home price and given than 32 %  of Neighborhood is poor and the student-teacher ration is higher, I suggest it is good price to sell to. And the client 3's home price $931,636.36 which is close to the maximum home price which is more than two standard deviation from the mean. Provided the the home has 8 rooms and the neighboor hood poverty level is only 3 % and the student teacher ratio is minimum, it is a fair price for this home.</p>
+<p><strong>Answer: </strong> 
+The price of client 1's home is $403,025.00 which is less than one standard deviation from the mean, I suggest it is a good price as about more than 60% of the home price is about one standards deviation less or more than the mean if the distribution of the data set is normal. The price of client 2's home is $237,478.72 which is more than double the minimum home price and given than 32 %  of Neighborhood is poor and the student-teacher ration is higher, I suggest it is good price to sell to. And the client 3's home price $931,636.36 which is close to the maximum home price which is more than two standard deviation from the mean, if we have normaly distibuted data. Provided that, the home has 8 rooms and the neighboorhood poverty level is only 3 % and the student teacher ratio is minimum, it is a fair price for this home.</p>
 
 </div>
 </div>
@@ -14099,7 +14272,7 @@ Range in prices: $69,044.61
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-As usally said 'All models are wrong but some are usefull', when use model is real life we have to also consider the situation at hand or factors that the model didn't consider or was not able to capture. In this developing this model we only considered the number of rooms, but we should also consider the size or area of each room in the house as this should siginificantly could affect the price of the home. Other factors such as accessiblity to hosipitals, roads, transportation, design and so on could also affect the price of the home. So data which is collected in an urban city could not be applicable in a rural city or even to other cities in another state. Given the the price of the home are adjusted to account for the price of homes at present time, the data colled from the 1978 could be important for estimating home price for present. Since the dataset are shufled randomly to split the dataset such that each split /sample could be representative of the whole dataset, the model is consitent enough to be used to predict house price.</p>
+As usally said 'All models are wrong but some are usefull', when we use a model in real life we have to also consider the situation at hand or factors that the model didn't consider or was not able to capture. In this developing this model we only considered the number of rooms, but we should also consider the size or area of each room in the house as this should siginificantly could affect the price of the home. Other factors such as accessiblity to hosipitals, roads, transportation, design and so on could also affect the price of the home. So data which is collected in an urban city could not be applicable in a rural city or even to other cities in another state. Given the the price of the home are adjusted to account for the price of homes at present time, the data colled from the 1978 could be important for estimating home price for present. Since the dataset are shufled randomly to split the dataset such that each split /sample could be representative of the whole dataset, the model is consitent enough to be used to predict house price.</p>
 
 </div>
 </div>
